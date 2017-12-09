@@ -12,7 +12,7 @@
                         <StackLayout Orientation="Horizontal" Spacing="15" Margin="10"  HorizontalOptions="End" >
                             <StackLayout  Padding="8" BackgroundColor="#0084FF">
                                 <Label Text="{Binding Message}" FontSize="Medium"  TextColor="White" />
-                                <Label Text="{Binding DateSent}" FontSize="Micro" TextColor="White" HorizontalOptions="End" HorizontalTextAlignment="End" />
+                                <Label Text="{Binding DateSent, StringFormat='{0:t}'}" FontSize="Micro" TextColor="White" HorizontalOptions="End" HorizontalTextAlignment="End" />
                             </StackLayout>
                             <Image Source="{Binding ImageUrl}" />
                         </StackLayout>
@@ -26,7 +26,7 @@
                             <Image Source="{Binding ImageUrl}" />
                             <StackLayout BackgroundColor="#F1EFF0" Padding="8">
                                 <Label Text="{Binding Message}" FontSize="Medium" />
-                                <Label Text="{Binding DateSent}" FontSize="Micro" HorizontalOptions="End" HorizontalTextAlignment="End" />
+                                <Label Text="{Binding DateSent, StringFormat='{0:t}'}" FontSize="Micro" HorizontalOptions="End" HorizontalTextAlignment="End" />
                             </StackLayout>
                         </StackLayout>
                     </ViewCell.View>
