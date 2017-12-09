@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:customListViewDemo="clr-namespace:CustomListViewDemo;assembly=CustomListViewDemo"
+             x:Class="CustomListViewDemo.MessengerView"
+             Padding="10,20,10,10">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="FromTemplate">
+                <ViewCell>
+                    <ViewCell.View>
+                        <StackLayout Orientation="Horizontal" Spacing="15" Margin="10"  HorizontalOptions="End" >
+                            <StackLayout  Padding="8" BackgroundColor="#0084FF">
+                                <Label Text="{Binding Message}" FontSize="Medium"  TextColor="White" />
+                                <Label Text="{Binding DateSent}" FontSize="Micro" TextColor="White" HorizontalOptions="End" HorizontalTextAlignment="End" />
+                            </StackLayout>
+                            <Image Source="{Binding ImageUrl}" />
+                        </StackLayout>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="ToTemplate">
+                <ViewCell>
+                    <ViewCell.View>
+                        <StackLayout Orientation="Horizontal" Spacing="15" Margin="10">
+                            <Image Source="{Binding ImageUrl}" />
+                            <StackLayout BackgroundColor="#F1EFF0" Padding="8">
+                                <Label Text="{Binding Message}" FontSize="Medium" />
+                                <Label Text="{Binding DateSent}" FontSize="Micro" HorizontalOptions="End" HorizontalTextAlignment="End" />
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+            <customListViewDemo:ChatDataTemplateSelector x:Key="ChatDataTemplateSelector" FromTemplate="{StaticResource FromTemplate}" ToTemplate="{StaticResource ToTemplate}" />
+        </ResourceDictionary>
+    </ContentView.Resources>
+    
+    <ContentView.Content>
+        <StackLayout Spacing="10">
+            <Label Text="Messenger" FontSize="Large" FontAttributes="Bold" />
+            
+            <ListView x:Name="ListMessages" HasUnevenRows="True" ItemTemplate="{StaticResource ChatDataTemplateSelector}" ItemSelected="ListMessages_OnItemSelected" CachingStrategy="RecycleElement" SeparatorColor="Transparent" />
+            
+        </StackLayout>
+    </ContentView.Content>
+    
+</ContentPage>
