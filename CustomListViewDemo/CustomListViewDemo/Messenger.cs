@@ -16,11 +16,11 @@ namespace CustomListViewDemo
         {
             List<Messenger> messages = new List<Messenger>
             {
-                new Messenger {FromUser = "Devlin", ToUser = "Ruby", Message = "Hey Ruby", ImageUrl = "http://lorempixel.com/120/120/people/3/", DateSent = DateTime.Now, Status = "Received"},
-                new Messenger {FromUser = "Ruby", ToUser = "Devlin", Message = "Hello Dev", ImageUrl = "http://lorempixel.com/120/120/people/1/", DateSent = DateTime.Now, Status = "Sent"},
-                new Messenger {FromUser = "Devlin", ToUser = "Ruby", Message = "How are you?", ImageUrl = "http://lorempixel.com/120/120/people/3/", DateSent = DateTime.Now, Status = "Received"},
-                new Messenger {FromUser = "Ruby", ToUser = "Devlin", Message = "Not much. Where are you?", ImageUrl = "http://lorempixel.com/120/120/people/1/", DateSent = DateTime.Now, Status = "Sent"},
-                new Messenger {FromUser = "Devlin", ToUser = "Ruby", Message = "Here in Reykjavík. Iceland.", ImageUrl = "http://lorempixel.com/120/120/people/3/", DateSent = DateTime.Now, Status = "Received"},
+                new Messenger {FromUser = "Devlin", ToUser = "Ruby", Message = "Hey Ruby", ImageUrl = "https://placeimg.com/120/120/people/1/", DateSent = DateTime.Now, Status = "Received"},
+                new Messenger {FromUser = "Ruby", ToUser = "Devlin", Message = "Hello Dev", ImageUrl = "https://placeimg.com/120/120/people/9/", DateSent = DateTime.Now, Status = "Sent"},
+                new Messenger {FromUser = "Devlin", ToUser = "Ruby", Message = "How are you?", ImageUrl = "https://placeimg.com/120/120/people/1/", DateSent = DateTime.Now, Status = "Received"},
+                new Messenger {FromUser = "Ruby", ToUser = "Devlin", Message = "Not much. Where are you?", ImageUrl = "https://placeimg.com/120/120/people/9/", DateSent = DateTime.Now, Status = "Sent"},
+                new Messenger {FromUser = "Devlin", ToUser = "Ruby", Message = "Here in Reykjavík. Iceland.", ImageUrl = "https://placeimg.com/120/120/people/1/", DateSent = DateTime.Now, Status = "Received"},
             };
 
             return messages;
